@@ -7,6 +7,24 @@
 
 <body class="news">
     <header>
+
+    </header>
+    <!-- The video -->
+    <video autoplay muted loop id="myVideo">
+  <source src="Video%20Footage%20Of%20City.mp4" type="video/mp4">
+</video>
+
+    <!-- Optional: some overlay text to describe the video -->
+    <div class="content">
+        <p1> If you have any questions email me at j.t.xiang@student.saintkentigern.com</p1>
+        <br>
+        <br>
+        <!-- Use a button to pause/play the video with JavaScript -->
+        <button id="myBtn" onclick="myFunction()">Pause</button>
+
+
+    </div>
+    <div class="content2">
         <div class="nav">
             <ul>
                 <li class="home"><a href="index.html">Home</a></li>
@@ -18,8 +36,22 @@
                 <li class="debate"><a href="Debate.html">Debate</a></li>
             </ul>
         </div>
-    </header>
+    </div>
+    <script>
+        var video = document.getElementById("myVideo");
+        var btn = document.getElementById("myBtn");
 
+        function myFunction() {
+            if (video.paused) {
+                video.play();
+                btn.innerHTML = "Pause";
+            } else {
+                video.pause();
+                btn.innerHTML = "Play";
+            }
+        }
+    </script>
 </body>
+<p1> Email me at j.t.xiang@student.saintkentigern.com </p1>
 
 </html>
